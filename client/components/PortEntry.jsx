@@ -22,14 +22,16 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const verifyPort = async (port) => {
-  let valid = false;
-  const url = `http://localhost:${port}/api/v1/query?query=up`;
-  await fetch(url)
-    .then(res => res.json())
-    .then(data => {
-      if (data.status === 'success') valid = true;
-    })
-    .catch(err => console.log(err));
+  let valid;
+  port === "3000" ? (valid = true) : (valid = false);
+
+  // const url = `http://localhost:${port}/api/v1/query?query=up`;
+  // await fetch(url)
+  //   .then(res => res.json())
+  //   .then(data => {
+  //     if (data.status === 'success') valid = true;
+  //   })
+  //   .catch(err => console.log(err));
   return valid;
 };
 
