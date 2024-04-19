@@ -1,8 +1,9 @@
 import * as types from "../constants/actionTypes.js";
 
 const initialState = {
-  connectionTime: '',
+  connectionTime: "",
   port: "",
+  portError: false,
   data: [],
 };
 
@@ -18,11 +19,16 @@ const mainReducer = (state = initialState, action) => {
         ...state,
         connectionTime: action.payload,
       };
+    case types.PORT_ERROR:
+      return {
+        ...state,
+        portError: action.payload,
+      };
     case types.UPDATE_DATA:
       return {
         ...state,
         data: action.payload,
-        };
+      };
     default:
       return state;
   }
