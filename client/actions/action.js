@@ -14,6 +14,13 @@ export const addConnectionTimeAction = (timestamp) => {
   };
 };
 
+export const portErrorAction = (error) => {
+  return {
+    type: types.PORT_ERROR,
+    payload: error,
+  };
+};
+
 export const updateDataAction = (data) => {
   return {
     type: types.UPDATE_DATA,
