@@ -18,36 +18,35 @@ function ClusterContainer(props){
   const [totalProducerList, setTotalProducerList] = useState([]);
   const [totalConsumerList, setTotalConsumerList] = useState([]);
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    //query Prom server for active controller count
-    let totalBrokers = fetch(
-      `http://localhost:${props.port}/api/v1/query?query=kafka_controller_kafkacontroller_activecontrollercount`
-    ).then((response) => response.json());
+  //   //query Prom server for active controller count
+  //   let totalBrokers = fetch(
+  //     `http://localhost:${props.port}/api/v1/query?query=kafka_controller_kafkacontroller_activecontrollercount`
+  //   ).then((response) => response.json());
     
-    //query Prom server for total producers records produced - to gather total producer count
-    let totalProducers = fetch(
-      `http://localhost:${props.port}/api/v1/query?query=kafka_producer_producer_metrics_record_send_total`
-    ).then((response) => response.json());
+  //   //query Prom server for total producers records produced - to gather total producer count
+  //   let totalProducers = fetch(
+  //     `http://localhost:${props.port}/api/v1/query?query=kafka_producer_producer_metrics_record_send_total`
+  //   ).then((response) => response.json());
 
-    //query Prom server for total consumer records consumed - to gather total consumer count
-    let totalConsumers = fetch(
-      `http://localhost:${props.port}/api/v1/query?query=kafka_consumer_consumer_fetch_manager_metrics_records_consumed_total`
-    ).then((response) => response.json());
+  //   //query Prom server for total consumer records consumed - to gather total consumer count
+  //   let totalConsumers = fetch(
+  //     `http://localhost:${props.port}/api/v1/query?query=kafka_consumer_consumer_fetch_manager_metrics_records_consumed_total`
+  //   ).then((response) => response.json());
 
-    Promise.all([totalBrokers, totalProducers, totalConsumers])
-      .then((allData) => {
-        //1. set Total Broker Count
-        setTotalBrokerList(allData[0].data.result);
+  //   Promise.all([totalBrokers, totalProducers, totalConsumers])
+  //     .then((allData) => {
+  //       //1. set Total Broker Count
+  //       setTotalBrokerList(allData[0].data.result);
 
-        //2. set Total Producer List
-        setTotalProducerList(allData[1].data.result);
+  //       //2. set Total Producer List
+  //       setTotalProducerList(allData[1].data.result);
       
-        // //3. set Total Consumer List
-        setTotalConsumerList(allData[2].data.result);
-      })
-      console.log(totalConsumerList)
-  },[])
+  //       // //3. set Total Consumer List
+  //       setTotalConsumerList(allData[2].data.result);
+  //     })
+  // },[])
 
 
   //Create broker componenets from totalBrokerList

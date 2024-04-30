@@ -116,7 +116,7 @@ const TopBannerContainerProdPage = () => {
         <Divider />
         <List>
           {[['Ecosystem Overview', '/dashboard'], ['Producers', '/producers'], ['Consumers', '/consumers'], ['Brokers', '/brokers'], ['Disconnect Cluster', '/']].map(([text, route]) => (
-             <Link to={route}>
+             <Link key={text} to={route}>
             <ListItem button key={text} >
               <ListItemText primary={text} />
             </ListItem>

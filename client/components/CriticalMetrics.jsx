@@ -20,7 +20,6 @@ const CriticalMetrics = (props) => {
   let value2 = 0;
   let urpColor = ''
   
-
   const metric3 = 'Offline Partitions'
   let value3 = 0;
   let offlinePartitionColor = ''
@@ -29,27 +28,27 @@ const CriticalMetrics = (props) => {
   const [uRP, setURP] = useState([]);
   const [offlinePartitionsArr, setOfflinePartitionsArr] = useState([])
 
-  useEffect(() => {
-    // identifies which controller in the cluster is the active controller
-    let activeControllers = fetch(`http://localhost:${props.port}/api/v1/query?query=kafka_controller_kafkacontroller_activecontrollercount`
-    ).then((respose) => respose.json());
-    // returns the ammount of underreplicated partitions in each cluster
-    let underReplicated = fetch(`http://localhost:${props.port}/api/v1/query?query=kafka_server_replicamanager_underreplicatedpartitions`
-    ).then((response) => response.json());
+  // useEffect(() => {
+  //   // identifies which controller in the cluster is the active controller
+  //   let activeControllers = fetch(`http://localhost:${props.port}/api/v1/query?query=kafka_controller_kafkacontroller_activecontrollercount`
+  //   ).then((respose) => respose.json());
+  //   // returns the ammount of underreplicated partitions in each cluster
+  //   let underReplicated = fetch(`http://localhost:${props.port}/api/v1/query?query=kafka_server_replicamanager_underreplicatedpartitions`
+  //   ).then((response) => response.json());
 
-    let offlinePartitions = fetch(`http://localhost:${props.port}/api/v1/query?query=kafka_controller_kafkacontroller_offlinepartitionscount`
-    ).then((response) => response.json());
-  //creates an array of the different object that we have fetched  
-  Promise.all([activeControllers, underReplicated, offlinePartitions])
-    .then((allData) => {
-      // saves the array of which broker is a controller
-      setActiveControllerArr(allData[0].data.result);
-      //save the array of under replicated partitions
-      setURP(allData[1].data.result);
-      // saves the array of offline partitions
-      setOfflinePartitionsArr(allData[2].data.result)
-    },
-    )}, []);
+  //   let offlinePartitions = fetch(`http://localhost:${props.port}/api/v1/query?query=kafka_controller_kafkacontroller_offlinepartitionscount`
+  //   ).then((response) => response.json());
+  // //creates an array of the different object that we have fetched  
+  // Promise.all([activeControllers, underReplicated, offlinePartitions])
+  //   .then((allData) => {
+  //     // saves the array of which broker is a controller
+  //     setActiveControllerArr(allData[0].data.result);
+  //     //save the array of under replicated partitions
+  //     setURP(allData[1].data.result);
+  //     // saves the array of offline partitions
+  //     setOfflinePartitionsArr(allData[2].data.result)
+  //   },
+  //   )}, []);
 
     // iterates through the Array and finds the controller and saves instance name
     activeControllerArr.forEach(ele => {
@@ -92,7 +91,7 @@ const CriticalMetrics = (props) => {
     <Grid container alignItems="stretch">
       <Card sx={{ minWidth: 275 }}>
         <CardContent style={{backgroundColor : controllerColor}}>
-          <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
+          <Typography sx={{ fontSize: 20 }} color="textSecondary" gutterBottom>
             {/* Checking value =  */}
             { metric1 }
           </Typography>
@@ -108,7 +107,7 @@ const CriticalMetrics = (props) => {
         
       <Card sx={{ minWidth: 275 }}>
         <CardContent style={{backgroundColor : urpColor}}>
-          <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
+          <Typography sx={{ fontSize: 20 }} color="textSecondary" gutterBottom>
             { metric2 }
           </Typography>
           <Divider/>
@@ -120,7 +119,7 @@ const CriticalMetrics = (props) => {
 
         <Card sx={{ minWidth: 275 }}>
         <CardContent style={{backgroundColor : offlinePartitionColor}}>
-          <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
+          <Typography sx={{ fontSize: 20 }} color="textSecondary" gutterBottom>
             { metric3 }
           </Typography>
           <Divider/>
