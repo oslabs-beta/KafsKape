@@ -3,7 +3,7 @@ import { Container, Grid, Box, Typography, Link } from '@material-ui/core'
 
 export default function BottomBanner() {
   const gridItems = [
-    { title: "Need Help?", link: "https://github.com/oslabs-beta/Kafmira" },
+    { title: "Need Help?", link: "https://www.linkedin.com/company/kafmira/" },
     { title: "About the Team", link: "http://kafmira.io/#clients-area" },
     { title: "Contact Us", link: "http://kafmira.io/#support-area" },
   ];
