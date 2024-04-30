@@ -25,7 +25,7 @@ export default function BottomBanner() {
       >
         <Container maxWidth="lg">
           <Box m={1.5} borderBottom={1}>
-            <Typography variant="h6" color="" gutterBottom>
+            <Typography variant="h6" color="inherit" gutterBottom>
               SSHK Technology Group
             </Typography>
           </Box>
