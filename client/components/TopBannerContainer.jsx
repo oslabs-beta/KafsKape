@@ -65,7 +65,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-const TopBannerContainer = () => {
+const TopBannerContainer = ({topBannerContainerTitle}) => {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -76,8 +76,6 @@ const TopBannerContainer = () => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-
-  // sx={{ flexGrow: 1 }}
 
   return (
     <Box >
@@ -94,7 +92,7 @@ const TopBannerContainer = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ display: 'flex', flexGrow: 1, justifyContent: 'flex-start' }}>
-            Ecosystem Overview
+            {topBannerContainerTitle}
           </Typography>
         </Toolbar>
       </AppBar>
