@@ -36,7 +36,7 @@ const mapStateToProps = (state) => {
   };
   
 
-const MakeResponseRateGraph = (props) => {
+const ProducerResponseRate = (props) => {
  
 
 // using setState so that we have a variable to save object to
@@ -426,13 +426,6 @@ const resRateData = {
     }
   
     return (
-        // <div>
-        // <h3 style ={{textAlign: 'center'}}>Response Rate per Second</h3>
-        //     <div style={{height:"1000px", width:"1000px"}}>
-        //         <Chart type='line' data={ chartData } />
-        //     </div>
-        // </div>
-
         <div>
             <Typography 
                 variant='h5'
@@ -448,6 +441,6 @@ const resRateData = {
     );
 }
 
-export default MakeResponseRateGraph;
+export default ProducerResponseRate;
 // export default connect(mapStateToProps, null)(MakeResponseRateGraph);
 

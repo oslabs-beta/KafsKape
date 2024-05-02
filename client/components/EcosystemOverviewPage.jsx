@@ -3,10 +3,11 @@ import TopBannerContainer from './TopBannerContainer.jsx';
 import ClusterContainer from './ClusterContainer.jsx';
 import BottomBanner from './BottomBanner.jsx';
 import CriticalMetrics from './CriticalMetrics.jsx';
+import styles from './LandingPage.module.css'
 
-const MainPageContainer =() => {
+const EcosystemOverviewPage =() => {
   return (
-    <div style = {{height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundImage: 'linear-gradient(to bottom left, #66a6ff, #89f7fe)'}}>
+    <div className={styles.background}>
       <TopBannerContainer topBannerContainerTitle="Ecosystem Overview"/>
         <div style ={{display: 'flex', flexDirection: 'column' , alignItems: 'center'}}>
             <ClusterContainer />
@@ -21,4 +22,4 @@ const MainPageContainer =() => {
   )
 }
 
-export default MainPageContainer;
+export default EcosystemOverviewPage;

@@ -31,7 +31,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const MakeRequestTotalGraph = (props) => {
+const ProducerRequestTotal = (props) => {
     // using setState so that we have a variable to save object to
 // const [reqTotal, setReqTotal] = useState({});
 
@@ -345,48 +345,6 @@ const MakeRequestTotalGraph = (props) => {
             ]
         }
     }
-    // const yArray = [];
-    // const xArray =[];
-    // // const producerYStats = [];
-    // // fills x array with the timestamps for each piece of data
-    // reqTotal.data.result[0].values.forEach(ele => {
-    //     const humanDate = new Date(ele[0] * 1000)
-    //     xArray.push(humanDate)
-    // });
-    // // fills y array with the value of each piece of data
-    // reqTotal.data.result[0].values.forEach(ele => {
-    //     yArray.push(ele[1])
-    // })
-
-    // // const innerFunc = () => {
-    // //     console.log('Entire Array: ', reqRateData.data.result[0].values);
-    // //     console.log('xArray: ', xArray);
-    // //     console.log('yArray: ', yArray);
-    // // }
-    // // innerFunc();
-    
-    
-
-    // return (
-    //     <div>
-    //     <h3 style ={{textAlign: 'center'}}>Request Total</h3>
-    //         <div style={{height:"1000px", width:"1000px"}}>
-    //             <Chart type='line' data={ {
-    //         labels: xArray,
-    //         datasets: [
-    //         {
-    //             label: 'Request Total',
-    //             data: yArray,
-    //             backgroundColor: 'blue',
-    //             borderColor:'black',
-    //             borderWidth: 4
-    //         }
-    //         ]
-    //             }}  
-    //         />
-    //         </div>
-    //     </div>
-    //     );
 
     const xArray = [];
  
@@ -446,12 +404,6 @@ const MakeRequestTotalGraph = (props) => {
     }
   
     return (
-        // <div>
-        //     <h3 style ={{textAlign: 'center'}}>Producer Request Total</h3>
-        //     <div style={{height:"1000px", width:"1000px"}}>
-        //         <Chart type='line' data={ chartData } />
-        //     </div>
-        // </div>
         <div>
             <Typography 
                 variant='h5'
@@ -467,5 +419,5 @@ const MakeRequestTotalGraph = (props) => {
 
 }
 
-export default MakeRequestTotalGraph;
+export default ProducerRequestTotal;
 // export default connect(mapStateToProps, null)(MakeRequestTotalGraph);

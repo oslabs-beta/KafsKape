@@ -391,12 +391,6 @@ function BrokerFailedProdReqRate(props) {
 
     // iterate through each array to build out graph
     return (
-        // <div>
-        // <h3 style ={{textAlign: 'center'}}>Request Total</h3>
-        //     <div style={{height:"1000px", width:"1000px"}}>
-        //         <Chart type='line' data={ chartData } />
-        //     </div>
-        // </div>
         <div>
             <Typography 
                 variant='h5'

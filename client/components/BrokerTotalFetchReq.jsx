@@ -398,8 +398,6 @@ const BrokerTotalFetchReqRate = (props) => {
         })
     }
 
-    // console.log('y data', yFetchDataSet)
-
     return (
         <div>
             <Typography 

@@ -1,0 +1,24 @@
+.root {
+    background: linear-gradient(to top right, #66a6ff, #89f7fe);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    align-content: flex-start;
+    min-height: 100vh;
+  }
+
+  .graph {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    align-content: flex-start;
+  }
+
+  .paper {
+    text-align: center;
+    min-height: 200px;
+  }

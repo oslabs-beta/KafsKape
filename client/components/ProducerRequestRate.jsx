@@ -32,7 +32,7 @@ const mapStateToProps = (state) => {
 };
 
 
-const MakeRequestRateGraph = (props) => {
+const ProducerRequestRate = (props) => {
   
     // using setState so that we have a variable to save object to
     // const [reqRateData, setReqRateData] = useState({});
@@ -356,49 +356,6 @@ const MakeRequestRateGraph = (props) => {
         ]
     }
 }
-    
-
-
-//   const xArray =[];
-//   const yArray = [];
-//   // fills x array with the timestamps for each piece of data
-//   reqRateData.data.result[0].values.forEach(ele => {
-//     const humanDate = new Date(ele[0] * 1000)
-//     xArray.push(humanDate)
-//   });
-//   // fills y array with the value of each piece of data
-//   reqRateData.data.result[0].values.forEach(ele => {
-//     yArray.push(ele[1])
-//   })
-
-// const innerFunc = () => {
-//     console.log('Entire Array: ', reqRateData.data.result[0].values);
-//     console.log('xArray: ', xArray);
-//     console.log('yArray: ', yArray);
-// }
-// innerFunc();
- 
-  
-
-//   return (
-//     <div>
-//         <h3 style ={{textAlign: 'center'}}>Request Rate per Second</h3>
-//         <div style={{height:"1000px", width:"1000px"}}>
-//             <Chart type='line' data={{
-//                 labels: xArray,
-//                 datasets: [
-//                     {
-//                         label: `${reqRateData.data.result[0].client_id}Request Rate per Second`,
-//                         data: yArray,
-//                         backgroundColor: 'rgba(75, 192, 192, 0.6)',
-//                         borderColor:'rgba(75, 192, 192, 1)',
-//                         borderWidth: 4
-//                     }
-//                 ]
-//             }} />
-//         </div>
-//         </div>
-//     );
 
 const xArray = [];
  
@@ -459,13 +416,6 @@ const xArray = [];
     }
   
     return (
-        // <div>
-        //     <h3 style ={{textAlign: 'center'}}>Message Request per Second</h3>
-        //     <div style={{height:"1000px", width:"1000px"}}>
-        //         <Chart type='line' data={ chartData } />
-        //     </div>
-        // </div>
-
         <div>
             <Typography 
                 variant='h5'
@@ -480,6 +430,5 @@ const xArray = [];
     );
 
 }
-
-export default MakeRequestRateGraph;
+export default ProducerRequestRate;
 // export default connect(mapStateToProps, null)(MakeRequestRateGraph);
