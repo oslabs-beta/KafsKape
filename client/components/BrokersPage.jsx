@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TopBannerContainerBrokerPage from './TopBannerContainerBrokerPage.jsx';
+import TopBannerContainer from './TopBannerContainer.jsx'
 import BrokerColumnContainer from './BrokerColumnContainer.jsx';
 import BrokerGraphContainer from './BrokerGraphContainer.jsx';
 import BrokerFailedProdReqRate from './BrokerFailedProdReq.jsx';
@@ -45,7 +45,7 @@ export default function BrokersPage() {
         style={{ minHeight: '100vh' }}
         /* style = {{ backgroundImage: 'linear-gradient(to top right, #66a6ff, #89f7fe)' }} */
       >
-        <TopBannerContainerBrokerPage/>
+        <TopBannerContainer topBannerContainerTitle="Brokers Overview"/>
         <Box >
           <Grid container spacing={2} className={classes.graph}>
             <Grid item className={classes.paper}>

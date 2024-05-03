@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TopBannerContainerProdPage from './TopBannerContainerProdPage.jsx';
+import TopBannerContainer from './TopBannerContainer.jsx';
 import ProducerGraphContainer from './ProducerGraphContainer.jsx';
 import ProducerColumnContainer from './ProducersColumnContainer.jsx';
 import { Box, Grid } from '@material-ui/core';
@@ -41,7 +41,7 @@ export default function ProducersPage(){
       style={{ minHeight: '100vh' }}
       // style = {{backgroundImage: 'linear-gradient(to top right, #66a6ff, #89f7fe)'}}
     >
-      <TopBannerContainerProdPage/>
+      <TopBannerContainer topBannerContainerTitle="Producers Overview"/>
       <Box >
           <Grid container spacing={2} className={classes.graph}>
             <Grid item className={classes.paper}>

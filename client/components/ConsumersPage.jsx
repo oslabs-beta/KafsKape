@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TopBannerContainerConsPage from './TopBannerContainerConsPage.jsx';
+import TopBannerContainer from './TopBannerContainer.jsx';
 import ConsumerGraphContainer from './ConsumerGraphContainer.jsx';
 import ConsumerColumnContainer from './ConsumersColumnContainer.jsx';
 import { Box, Grid } from '@material-ui/core';
@@ -41,7 +41,7 @@ export default function ConsumersPage() {
       style={{ minHeight: '100vh' }}
       >
 
-      <TopBannerContainerConsPage/>
+      <TopBannerContainer topBannerContainerTitle="Consumers Overview"/>
         <Box >
         <Grid container spacing={2} className={classes.graph}>
           <Grid item className={classes.paper}>
