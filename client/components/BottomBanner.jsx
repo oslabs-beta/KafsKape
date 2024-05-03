@@ -21,6 +21,7 @@ export default function BottomBanner() {
           zIndex: "tooltip",
           left: "50%",
           top: "100%",
+          width: "100vw",
         }}
       >
         <Container maxWidth="lg">

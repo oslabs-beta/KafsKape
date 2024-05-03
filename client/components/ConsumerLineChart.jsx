@@ -33,7 +33,7 @@ import {
 
 //Hard-coded data object for testing purposes employed; cross-checked request body from Prometheus tests
 
-const ConsumerMakeLineChart = () => {
+const ConsumerLineChart = () => {
 
   const obj = {
     "status": "success",
@@ -236,13 +236,6 @@ const ConsumerMakeLineChart = () => {
     };
 
   return (
-    // <div>
-    //   <h3 style ={{textAlign: 'center'}}>Fetch Records Consumed Total</h3>
-    //   <div style={{height:"1000px", width:"1000px"}}>
-    //       <Chart type='line' data={ data }/>
-    //   </div>
-    // </div>
-
     <div>
         <Typography 
             variant='h5'
@@ -258,4 +251,4 @@ const ConsumerMakeLineChart = () => {
   );
 };
 
-export default ConsumerMakeLineChart;
+export default ConsumerLineChart;

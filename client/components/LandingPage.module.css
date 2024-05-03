@@ -1,0 +1,13 @@
+.background {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom left, #66a6ff, #89f7fe);
+}
+
+.logo {
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+}
